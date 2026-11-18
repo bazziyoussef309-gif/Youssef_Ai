@@ -1,0 +1,189 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080d12;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #101820;
+  padding: 25px 15px;
+  border-right: 1px solid #25342f;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sidebar h2 {
+  color: #45f5a1;
+  font-size: 21px;
+}
+
+.sidebar h4 {
+  color: #81958a;
+  font-size: 12px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 9px;
+  padding: 12px;
+  color: white;
+  background: #182720;
+  text-align: left;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #254638;
+}
+
+.new-chat {
+  background: #20a875;
+  color: #06130d;
+  font-weight: bold;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  color: #718579;
+  font-size: 12px;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  padding: 22px;
+  border-bottom: 1px solid #25342f;
+  display: flex;
+  justify-content: space-between;
+}
+
+.status {
+  color: #45f5a1;
+  font-size: 12px;
+}
+
+.welcome {
+  margin: auto auto 30px;
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome h1 {
+  font-size: clamp(27px, 5vw, 42px);
+  color: #45f5a1;
+  margin-bottom: 12px;
+}
+
+.welcome p {
+  color: #91a39a;
+}
+
+.messages {
+  width: min(750px, 90%);
+  margin: 0 auto;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.message {
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.user {
+  background: #19372b;
+}
+
+.ai {
+  background: #131d25;
+  border: 1px solid #25342f;
+}
+
+.input-area {
+  width: min(750px, 90%);
+  margin: 20px auto 10px;
+  display: flex;
+  gap: 10px;
+  background: #111b22;
+  padding: 12px;
+  border: 1px solid #35483f;
+  border-radius: 14px;
+}
+
+textarea {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  resize: vertical;
+  min-height: 45px;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.input-area button {
+  background: #45f5a1;
+  color: #07130e;
+  font-size: 20px;
+  align-self: end;
+}
+
+.disclaimer {
+  text-align: center;
+  color: #718579;
+  font-size: 11px;
+  padding: 10px;
+}
+
+@media(max-width: 650px) {
+  .sidebar {
+    width: 75px;
+    padding: 15px 7px;
+    gap: 12px;
+  }
+
+  .sidebar h2 {
+    font-size: 11px;
+    overflow-wrap: anywhere;
+  }
+
+  .sidebar button {
+    font-size: 10px;
+    padding: 9px 5px;
+    text-align: center;
+  }
+
+  .sidebar h4,
+  .sidebar-bottom {
+    display: none;
+  }
+
+  header {
+    padding: 17px 10px;
+    font-size: 13px;
+  }
+}
